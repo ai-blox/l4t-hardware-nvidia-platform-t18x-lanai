@@ -60,5 +60,17 @@
 			regulator-max-microvolt = <1200000>;
 			enable-active-high;
 		};
+
+		p3509_vdd_sdmmc3_sw: regulator@114 {
+			compatible = "regulator-fixed-sync";
+			reg = <114>;
+			regulator-name = "vdd-sdmmc3-sw";
+			regulator-min-microvolt = <3300000>;
+			regulator-max-microvolt = <3300000>;
+			gpio = <&tegra_aon_gpio TEGRA_AON_GPIO(EE, 2) 0>;
+			enable-active-high;
+			regulator-boot-on;
+			vin-supply = <&battery_reg>;
+		};
 	};
 };

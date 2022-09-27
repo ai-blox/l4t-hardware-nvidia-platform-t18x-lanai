@@ -126,7 +126,8 @@
 
 	sdhci@3440000 {
 		vqmmc-supply = <&spmic_ldo5>;
-		vmmc-supply = <&spmic_sd2>;
+		vmmc-supply = <&p3509_vdd_sdmmc3_sw>;
+
 	};
 
 	sdhci@3420000 {
